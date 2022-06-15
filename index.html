@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTED</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="./index.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    
+</head>
+<body>
+ <div class="container">
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#ourteam">Our Team</a></li>
+            <li><a href="#joinus">Join us</a></li>
+            <li><button><a href="#signup">SIGN UP</a></button></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 id="main-header">THIS IS YOUR MISSION</h1>
+        <p id="this-page">THIS PAGE NEED TO BE PERFECT FOR ALL BROWSERS & SCREENS!</p>
+        <button><a href="#getstarted">GET STARTED</a></button></button>
+    </section>
+    <section id="services">
+        <div>
+            <h1>Services</h1>
+            <p>Great design is about more than style, it's about being yourself,
+                communicating your ideas and expressing your values.</p>
+        </div>
+        <div  style="margin: 40px;" class="services-buttons">
+            <button style="color:#00b44c"id="service0" onclick="onServiceChange(0)"><img src="./s1.jpg" height="100" width="100"/>For Advetisers</button>
+            <button style="color:black" id="service1" onclick="onServiceChange(1)"><img src="./s2.jpg" height="100" width="100"/>For Publishers</button>
+            <button style="color:black" id="service2" onclick="onServiceChange(2)"><img src="./s3.jpg" height="100" width="100"/>Technology</button>
+            <button style="color:black" id="service3" onclick="onServiceChange(3)"><img src="./s4.jpg" height="100" width="100"/>Creative Team</button>
+            <button style="color:black" id="service4" onclick="onServiceChange(4)"><img src="./s5.jpg" height="100" width="100"/>Web Developers</button>
+        </div>
+        <div class="wrapper-styles">
+            
+            <p id="service-text">Advetisers!!! Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a     type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <img src="homepic1.jpg" id="service-img" alt="service-img" style="max-width:100%;height:auto;" width="500" height="400">
+        </div>
+
+    </section>
+    <section id="ourteam">
+        <h1>Our Team</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to 
+            make a type specimen book. It has survived not only five centuries, 
+            but also the leap into electronic typesetting, remaining essentially unchanged.
+             It was popul</p>
+             <div #swiperRef="" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <img src="albert1.jpg" height="500" width="50" class="swiper-slide">
+                  <img src="albert3.jpg" class="swiper-slide">
+                  <img src="albert5.jpg" class="swiper-slide">
+                  <img src="albert2.jpg" class="swiper-slide">
+                  <img src="albert4.jpg" class="swiper-slide">
+                  <img src="albert6.jpg" class="swiper-slide">
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+          
+              <!-- Swiper JS -->
+              <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+          
+              <!-- Initialize Swiper -->
+              <script>
+                var swiper = new Swiper(".mySwiper", {
+                  slidesPerView: 3,
+                  centeredSlides: true,
+                  spaceBetween: 30,
+                  pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction"
+                  },
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                  }
+                });
+              </script>
+    </section>
+    <section id="joinus">
+        <h1>Join us</h1>
+        <p>Great design is about more than style, it's about being yourself,
+            communicating your ideas and expressing your values.</p>
+            <div style="margin: 30px;" class="form-container">
+                <form action="https://formsubmit.co/mor@selected.co.il" method="POST" onsubmit="submitHandler()">
+                  <div class="row">
+                    <div class="col-75">
+                      <input required type="text" id="name" name="name" placeholder="Your name">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <input type="hidden" name="_subject" value="New message from Shir Rotem Website!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="col-75">
+                      <input required type="email" id="email" name="email" placeholder="Your Email">
+                    </div>
+                    <div class="col-75">
+                      <input required type="text" id="subject" name="subject" placeholder="Your Subject">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-75">
+                      <textarea required id="message" name="message" placeholder="Your Message" style="height:200px"></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <input type="submit"  value="Send Message">
+                  </div>
+                </form>
+              </div>
+    </section>
+ </div>   
+</body>
+</html>

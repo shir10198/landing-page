@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgb(230, 227, 227);
+    color: rgb(0, 0, 0);
+    line-height: 1.6;
+    height:100vh;
+    overflow: hidden;
+    text-align: center;
+}
+.wrapper-styles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+    grid-gap: 40px;
+    grid-auto-rows: 400px;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    
+}
+button{
+    font: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-radius: 25px;
+    padding: 0.25rem 1rem; 
+    font-weight: bold;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgb(0, 0, 0, 0.7);
+
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: right;
+}
+
+.navbar ul li{
+    margin: 0 1rem;
+    padding: 1rem;
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    
+}
+.navbar ul li button{
+ background-color: #00b44c;
+}
+.navbar ul li a:hover{
+    color: #00b44c;
+}
+.navbar ul li button :hover{
+    color: white;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+  }
+
+
+section h1{
+    font-size: 4rem;
+}
+section p{
+    font-size: 1.5rem;
+}
+
+section#home{
+   background-image: url(./homepic.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   transition: 5s;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100vh;
+
+   animation-name: animate;
+   animation-direction: alternate-reverse ;
+   animation-duration: 30s;
+   animation-fill-mode: forwards;
+   animation-iteration-count: infinite ;
+   animation-play-state:running ;
+   animation-timing-function: ease-in-out;
+
+}
+
+@keyframes animate{
+
+    0%{background-image: url(./homepic1.jpg);
+    }
+    
+    20%{background-image: url(./homepic2.jpg);
+    }
+    
+    40%{background-image: url(./homepic3.jpg);
+    }
+    
+    60%{background-image: url(./homepic4.jpg);
+    }
+
+    80%{background-image: url(./homepic5.jpg);
+    }
+
+    100%{background-image: url(./homepic.jpg);
+    }
+
+}
+
+section#home button a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    background-color: #00b44c;
+    border-radius: 25px;
+    padding: 0.25rem 1rem; 
+}
+
+section#home h1#main-header{
+    color: #00b44c;
+}
+section#home p#this-page{
+    color: white;
+    font-weight: bold;
+    
+}
+section#services{
+    background: url(./servicespic.jpg) no-repeat center center/ cover;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: center;
+}
+section#ourteam{
+    background:white;
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100vh;
+}
+section#joinus{
+    background:rgb(233, 232, 232) ;
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100vh;
+}
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  input[type=email], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  /* Style the label to display next to the inputs */
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  /* Style the container */
+  .form-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  /* Floating column for labels: 25% width */
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  /* Floating column for inputs: 75% width */
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
